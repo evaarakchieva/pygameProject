@@ -58,9 +58,9 @@ while game_is_running:
             if event.key == pygame.K_RIGHT:
                 fighter_is_moving_right = False
 
-    if fighter_is_moving_left:  # and fighter_x >= FIGHTER_STEP:
+    if fighter_is_moving_left and fighter_x >= FIGHTER_STEP:
         fighter_x -= FIGHTER_STEP
-    if fighter_is_moving_right:  # and fighter_x <= screen_width - fighter_width - FIGHTER_STEP:
+    if fighter_is_moving_right and fighter_x <= screen_width - fighter_width - FIGHTER_STEP:
         fighter_x += FIGHTER_STEP
 
     alien_y += alien_speed
